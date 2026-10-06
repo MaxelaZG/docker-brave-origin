@@ -28,6 +28,8 @@ RUN \
   apt-get install -y --no-install-recommends \
     brave-origin && \
   ln -s /usr/bin/brave-origin-stable /usr/bin/brave-browser && \
+  mkdir -p /config/.config/BraveSoftware && \
+  ln -s Brave-Origin /config/.config/BraveSoftware/Brave-Browser && \
   echo "**** cleanup ****" && \
   printf \
     "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" \
