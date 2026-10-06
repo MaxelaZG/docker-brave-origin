@@ -26,7 +26,8 @@ RUN \
     > /etc/apt/sources.list.d/brave-browser-release.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    brave-browser && \
+    brave-origin && \
+  ln -s /usr/bin/brave-origin-stable /usr/bin/brave-browser && \
   echo "**** cleanup ****" && \
   printf \
     "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" \
